@@ -1,0 +1,36 @@
+{
+  "name": "dephall",
+  "version": "0.0.0",
+  "description": "Extract all designated parameter and default to a given value if undefined.",
+  "main": "dephall.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/dephall.git"
+  },
+  "keywords": [
+    "extract",
+    "all",
+    "designated",
+    "element",
+    "default",
+    "dephall"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/dephall/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/dephall#readme",
+  "dependencies": {
+    "arid": "^0.2.0",
+    "doubt": "^0.2.0",
+    "falze": "^0.1.0",
+    "falzy": "^0.3.0",
+    "harden": "^0.6.0",
+    "pyck": "^0.2.0",
+    "zelf": "^0.2.0"
+  }
+}
