@@ -1,5 +1,6 @@
 {
   "name": "dephall",
+  "version": "0.1.0",
   "description": "Extract all designated parameter and default to a given value if undefined.",
   "main": "dephall.js",
   "authors": [

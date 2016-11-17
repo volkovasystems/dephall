@@ -43,6 +43,8 @@
 
 	@module-documentation:
 		Extract all designated parameter and default to a given value if undefined.
+
+		If the result contains single element then it will return that element.
 	@end-module-documentation
 
 	@include:
@@ -113,6 +115,9 @@ const dephall = function dephall( list, condition, defer ){
 
 	if( arid( result ) ){
 		return defer;
+
+	}else if( result.length == 1 ){
+		return result[ 0 ];
 
 	}else{
 		return result;
