@@ -44,6 +44,8 @@
 	@module-documentation:
 		Extract all designated parameter and default to a given value if undefined.
 
+		Note that this will only extract truthy values.
+
 		If the result contains single element then it will return that element.
 	@end-module-documentation
 
@@ -58,6 +60,18 @@
 			"zelf": "zelf"
 		}
 	@end-include
+
+	@global-constant:
+		{
+			"BOOLEAN": "boolean",
+			"FUNCTION": "function",
+			"NUMBER": "number",
+			"OBJECT": "object",
+			"STRING": "string",
+			"UNDEFINED": "undefined",
+			"SYMBOL": "symbol"
+		}
+	@end-global-constant
 */
 
 const arid = require( "arid" );
@@ -101,6 +115,10 @@ const dephall = function dephall( list, condition, defer ){
 		@end-meta-configuration
 	*/
 
+	if( !doubt( list, AS_ARRAY ) ){
+		throw new Error( "invalid list" );
+	}
+
 	if( falze( condition ) ){
 		throw new Error( "invalid condition" );
 	}
@@ -111,7 +129,7 @@ const dephall = function dephall( list, condition, defer ){
 
 	let self = zelf( this );
 
-	let result = pyck.bind( self )( list, condition );
+	let result = pyck.bind( self )( list, condition, true );
 
 	if( arid( result ) ){
 		return defer;
