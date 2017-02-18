@@ -24,4 +24,5 @@ falzy \
 harden \
 pyck \
 zelf \
---save
+--save \
+--force-latest

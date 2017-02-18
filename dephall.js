@@ -126,10 +126,6 @@ const dephall = function dephall( list, condition, defer ){
 		throw new Error( "invalid condition" );
 	}
 
-	if( falzy( defer ) ){
-		throw new Error( "defer value not give" );
-	}
-
 	let self = zelf( this );
 
 	let result = pyck.bind( self )( list, condition, true );
