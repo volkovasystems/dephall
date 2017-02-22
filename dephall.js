@@ -55,9 +55,10 @@
 			"arid": "arid",
 			"doubt": "doubt",
 			"falze": "falze",
-			"falzy": "falzy",
 			"harden": "harden",
 			"pyck": "pyck",
+			"raze": "raze",
+			"truly": "truly",
 			"zelf": "zelf"
 		}
 	@end-include
@@ -78,9 +79,10 @@
 const arid = require( "arid" );
 const doubt = require( "doubt" );
 const falze = require( "falze" );
-const falzy = require( "falzy" );
 const harden = require( "harden" );
 const pyck = require( "pyck" );
+const raze = require( "raze" );
+const truly = require( "truly" );
 const zelf = require( "zelf" );
 
 harden( "BOOLEAN", "boolean" );
@@ -111,7 +113,10 @@ const dephall = function dephall( list, condition, defer ){
 					SYMBOL,
 					"[string, function]"
 				],
-				"defer:required": "*"
+				"defer:required": [
+					"*",
+					"..."
+				]
 			}
 		@end-meta-configuration
 	*/
@@ -124,12 +129,10 @@ const dephall = function dephall( list, condition, defer ){
 		throw new Error( "invalid condition" );
 	}
 
-	let self = zelf( this );
-
-	let result = pyck.bind( self )( list, condition, true );
+	let result = pyck.bind( zelf( this ) )( list, condition, true );
 
 	if( arid( result ) ){
-		return defer;
+		return raze( arguments ).splice( 2 ).filter( truly )[ 0 ];
 
 	}else if( result.length == 1 ){
 		return result[ 0 ];

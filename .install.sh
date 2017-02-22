@@ -3,9 +3,10 @@ babel-runtime \
 arid \
 doubt \
 falze \
-falzy \
 harden \
 pyck \
+raze \
+truly \
 zelf \
 --save && \
 yarn add \
@@ -20,9 +21,10 @@ bower install \
 arid \
 doubt \
 falze \
-falzy \
 harden \
 pyck \
+raze \
+truly \
 zelf \
 --save \
 --force-latest
