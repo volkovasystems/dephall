@@ -1,6 +1,7 @@
 yarn add \
 babel-runtime \
 arid \
+arkount \
 doubt \
 falze \
 harden \
@@ -19,6 +20,7 @@ webpack \
 --dev && \
 bower install \
 arid \
+arkount \
 doubt \
 falze \
 harden \
