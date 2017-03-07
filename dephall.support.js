@@ -53,6 +53,7 @@
               	@include:
               		{
               			"arid": "arid",
+              			"arkount": "arkount",
               			"doubt": "doubt",
               			"falze": "falze",
               			"harden": "harden",
@@ -77,6 +78,7 @@
               */
 
 var arid = require("arid");
+var arkount = require("arkount");
 var doubt = require("doubt");
 var falze = require("falze");
 var harden = require("harden");
@@ -134,7 +136,7 @@ var dephall = function dephall(list, condition, defer) {
 	if (arid(result)) {
 		return raze(arguments).splice(2).filter(truly)[0];
 
-	} else if (result.length == 1) {
+	} else if (arkount(result) == 1) {
 		return result[0];
 
 	} else {
