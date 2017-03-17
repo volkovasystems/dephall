@@ -1,10 +1,10 @@
 yarn add \
 babel-runtime \
 arid \
-arkount \
 doubt \
 falze \
 harden \
+plough \
 pyck \
 raze \
 truly \
@@ -20,10 +20,10 @@ webpack \
 --dev && \
 bower install \
 arid \
-arkount \
 doubt \
 falze \
 harden \
+plough \
 pyck \
 raze \
 truly \

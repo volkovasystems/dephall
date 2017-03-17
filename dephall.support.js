@@ -47,16 +47,16 @@
               
               		Note that this will only extract truthy values.
               
-              		If the result contains single element then it will return that element.
+              		This will always return an array.
               	@end-module-documentation
               
               	@include:
               		{
               			"arid": "arid",
-              			"arkount": "arkount",
               			"doubt": "doubt",
               			"falze": "falze",
               			"harden": "harden",
+              			"plough": "plough",
               			"pyck": "pyck",
               			"raze": "raze",
               			"truly": "truly",
@@ -78,10 +78,10 @@
               */
 
 var arid = require("arid");
-var arkount = require("arkount");
 var doubt = require("doubt");
 var falze = require("falze");
 var harden = require("harden");
+var plough = require("plough");
 var pyck = require("pyck");
 var raze = require("raze");
 var truly = require("truly");
@@ -131,13 +131,12 @@ var dephall = function dephall(list, condition, defer) {
 		throw new Error("invalid condition");
 	}
 
-	var result = pyck.bind(zelf(this))(list, condition, true);
+	var self = zelf(this);
+
+	var result = pyck.bind(self)(list, condition, true);
 
 	if (arid(result)) {
-		return raze(arguments).splice(2).filter(truly)[0];
-
-	} else if (arkount(result) == 1) {
-		return result[0];
+		return pyck.bind(self)(plough(raze(arguments).splice(2)).filter(truly), condition, true);
 
 	} else {
 		return result;
