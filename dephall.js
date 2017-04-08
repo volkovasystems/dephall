@@ -56,7 +56,7 @@
 			"doubt": "doubt",
 			"falze": "falze",
 			"harden": "harden",
-			"plough": "plough",
+			"leveld": "leveld",
 			"pyck": "pyck",
 			"raze": "raze",
 			"truly": "truly",
@@ -81,7 +81,7 @@ const arid = require( "arid" );
 const doubt = require( "doubt" );
 const falze = require( "falze" );
 const harden = require( "harden" );
-const plough = require( "plough" );
+const leveld = require( "leveld" );
 const pyck = require( "pyck" );
 const raze = require( "raze" );
 const truly = require( "truly" );
@@ -136,7 +136,9 @@ const dephall = function dephall( list, condition, defer ){
 	let result = pyck.bind( self )( list, condition, true );
 
 	if( arid( result ) ){
-		return pyck.bind( self )( plough( raze( arguments ).splice( 2 ) ).filter( truly ), condition, true );
+		defer = raze( arguments ).splice( 2 );
+
+		return pyck.bind( self )( leveld( defer, 1 ).filter( truly ), condition, true );
 
 	}else{
 		return result;

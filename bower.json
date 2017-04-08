@@ -1,6 +1,6 @@
 {
   "name": "dephall",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "Extract all designated parameter and default to a given value if undefined.",
   "main": "dephall.deploy.js",
   "support": "dephall.support.js",
@@ -30,7 +30,7 @@
     "doubt": "^0.24.0",
     "falze": "^0.20.0",
     "harden": "^0.21.0",
-    "plough": "^0.22.0",
+    "leveld": "^0.0.0",
     "pyck": "^0.20.0",
     "raze": "^0.25.0",
     "truly": "^0.17.0",

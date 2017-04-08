@@ -4,7 +4,7 @@ arid \
 doubt \
 falze \
 harden \
-plough \
+leveld \
 pyck \
 raze \
 truly \
@@ -23,7 +23,7 @@ arid \
 doubt \
 falze \
 harden \
-plough \
+leveld \
 pyck \
 raze \
 truly \
