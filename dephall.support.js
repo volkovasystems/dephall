@@ -55,7 +55,6 @@
               			"arid": "arid",
               			"doubt": "doubt",
               			"falze": "falze",
-              			"harden": "harden",
               			"leveld": "leveld",
               			"pyck": "pyck",
               			"raze": "raze",
@@ -64,36 +63,16 @@
               		}
               	@end-include
               
-              	@global-constant:
-              		{
-              			"BOOLEAN": "boolean",
-              			"FUNCTION": "function",
-              			"NUMBER": "number",
-              			"OBJECT": "object",
-              			"STRING": "string",
-              			"UNDEFINED": "undefined",
-              			"SYMBOL": "symbol"
-              		}
-              	@end-global-constant
               */
 
 var arid = require("arid");
 var doubt = require("doubt");
 var falze = require("falze");
-var harden = require("harden");
 var leveld = require("leveld");
 var pyck = require("pyck");
 var raze = require("raze");
 var truly = require("truly");
 var zelf = require("zelf");
-
-harden("BOOLEAN", "boolean");
-harden("FUNCTION", "function");
-harden("NUMBER", "number");
-harden("OBJECT", "object");
-harden("STRING", "string");
-harden("UNDEFINED", "undefined");
-harden("SYMBOL", "symbol");
 
 var dephall = function dephall(list, condition, defer) {
 	/*;
