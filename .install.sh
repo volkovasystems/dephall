@@ -3,7 +3,6 @@ babel-runtime \
 arid \
 doubt \
 falze \
-harden \
 leveld \
 pyck \
 raze \
@@ -22,7 +21,6 @@ bower install \
 arid \
 doubt \
 falze \
-harden \
 leveld \
 pyck \
 raze \
