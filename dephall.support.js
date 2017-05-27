@@ -54,8 +54,6 @@
               		{
               			"arid": "arid",
               			"doubt": "doubt",
-              			"falze": "falze",
-              			"leveld": "leveld",
               			"pyck": "pyck",
               			"raze": "raze",
               			"truly": "truly",
@@ -67,8 +65,6 @@
 
 var arid = require("arid");
 var doubt = require("doubt");
-var falze = require("falze");
-var leveld = require("leveld");
 var pyck = require("pyck");
 var raze = require("raze");
 var truly = require("truly");
@@ -85,6 +81,7 @@ var dephall = function dephall(list, condition, defer) {
                                                         			"condition:required": [
                                                         				"string",
                                                         				"function",
+                                                        				RegExp,
                                                         				BOOLEAN,
                                                         				FUNCTION,
                                                         				NUMBER,
@@ -92,7 +89,8 @@ var dephall = function dephall(list, condition, defer) {
                                                         				STRING,
                                                         				UNDEFINED,
                                                         				SYMBOL,
-                                                        				"[string, function]"
+                                                        				"*",
+                                                        				"[*]"
                                                         			],
                                                         			"defer:required": [
                                                         				"*",
@@ -106,10 +104,6 @@ var dephall = function dephall(list, condition, defer) {
 		throw new Error("invalid list");
 	}
 
-	if (falze(condition)) {
-		throw new Error("invalid condition");
-	}
-
 	var self = zelf(this);
 
 	var result = pyck.bind(self)(list, condition, true);
@@ -117,7 +111,7 @@ var dephall = function dephall(list, condition, defer) {
 	if (arid(result)) {
 		defer = raze(arguments).splice(2);
 
-		return pyck.bind(self)(leveld(defer, 1).filter(truly), condition, true);
+		return pyck.bind(self)(defer.filter(truly), condition, true);
 
 	} else {
 		return result;

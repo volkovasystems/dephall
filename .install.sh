@@ -2,8 +2,6 @@ yarn add \
 babel-runtime \
 arid \
 doubt \
-falze \
-leveld \
 pyck \
 raze \
 truly \
@@ -20,8 +18,6 @@ webpack \
 bower install \
 arid \
 doubt \
-falze \
-leveld \
 pyck \
 raze \
 truly \
