@@ -54,9 +54,8 @@
               	@include:
               		{
               			"arid": "arid",
-              			"doubt": "doubt",
               			"pyck": "pyck",
-              			"raze": "raze",
+              			"shft": "shft",
               			"truly": "truly",
               			"zelf": "zelf"
               		}
@@ -65,9 +64,8 @@
               */
 
 var arid = require("arid");
-var doubt = require("doubt");
 var pyck = require("pyck");
-var raze = require("raze");
+var shft = require("shft");
 var truly = require("truly");
 var zelf = require("zelf");
 
@@ -101,8 +99,8 @@ var dephall = function dephall(list, condition, defer) {
                                                         	@end-meta-configuration
                                                         */
 
-	if (!doubt(list, AS_ARRAY)) {
-		throw new Error("invalid list");
+	if (arguments.length < 3) {
+		throw new Error("invalid parameter");
 	}
 
 	var self = zelf(this);
@@ -110,7 +108,7 @@ var dephall = function dephall(list, condition, defer) {
 	var result = pyck.bind(self)(list, condition, true);
 
 	if (arid(result)) {
-		defer = raze(arguments).splice(2);
+		defer = shft(arguments, 2);
 
 		return pyck.bind(self)(defer.filter(truly), condition, true);
 

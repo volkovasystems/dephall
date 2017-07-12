@@ -1,9 +1,8 @@
 yarn add \
 babel-runtime \
 arid \
-doubt \
 pyck \
-raze \
+shft \
 truly \
 zelf \
 --save && \
@@ -17,9 +16,8 @@ webpack \
 --dev && \
 bower install \
 arid \
-doubt \
 pyck \
-raze \
+shft \
 truly \
 zelf \
 --save \
