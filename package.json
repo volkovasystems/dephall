@@ -1,52 +1,51 @@
 {
-  "name": "dephall",
-  "version": "0.35.0",
-  "description": "Extract all designated parameter and default to a given value if undefined.",
-  "main": "dephall.js",
-  "support": "dephall.support.js",
-  "deploy": "dephall.deploy.js",
-  "browser": "dephall.deploy.js",
-  "scripts": {
-    "build": "babel dephall.js --out-file dephall.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha dephall-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/dephall.git"
-  },
-  "keywords": [
-    "extract",
-    "all",
-    "designated",
-    "element",
-    "default",
-    "dephall"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/dephall/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/dephall#readme",
-  "dependencies": {
-    "arid": "^0.29.0",
-    "babel-runtime": "^6.23.0",
-    "doubt": "^0.30.0",
-    "pyck": "^0.36.0",
-    "raze": "^0.33.0",
-    "truly": "^0.19.0",
-    "zelf": "^0.12.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.1.0"
-  }
+	"name": "dephall",
+	"version": "0.36.0",
+	"description": "Extract all designated parameter and default to a given value if undefined.",
+	"main": "dephall.js",
+	"support": "dephall.support.js",
+	"deploy": "dephall.deploy.js",
+	"browser": "dephall.deploy.js",
+	"scripts": {
+		"build": "babel dephall.js --out-file dephall.support.js --source-maps && webpack --progress --display-modules",
+		"test": "mocha dephall-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/dephall.git"
+	},
+	"keywords": [
+		"extract",
+		"all",
+		"designated",
+		"element",
+		"default",
+		"dephall"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/dephall/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/dephall#readme",
+	"dependencies": {
+		"arid": "^0.29.0",
+		"babel-runtime": "^6.23.0",
+		"pyck": "^0.37.0",
+		"shft": "^0.4.0",
+		"truly": "^0.20.0",
+		"zelf": "^0.13.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.3.0"
+	}
 }
