@@ -1,14 +1,17 @@
 {
 	"name": "dephall",
-	"version": "0.36.0",
+	"version": "0.37.0",
 	"description": "Extract all designated parameter and default to a given value if undefined.",
 	"main": "dephall.js",
 	"support": "dephall.support.js",
 	"deploy": "dephall.deploy.js",
 	"browser": "dephall.deploy.js",
 	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
 		"build": "babel dephall.js --out-file dephall.support.js --source-maps && webpack --progress --display-modules",
-		"test": "mocha dephall-test.js"
+		"pretest": "npm run clear && npm run build",
+		"test": "node dephall-test.js"
 	},
 	"repository": {
 		"type": "git",
@@ -33,12 +36,12 @@
 	},
 	"homepage": "https://github.com/volkovasystems/dephall#readme",
 	"dependencies": {
-		"arid": "^0.29.0",
-		"babel-runtime": "^6.23.0",
-		"pyck": "^0.37.0",
-		"shft": "^0.4.0",
+		"arid": "^0.30.0",
+		"babel-runtime": "^6.25.0",
+		"pyck": "^0.38.0",
+		"shft": "^0.5.0",
 		"truly": "^0.20.0",
-		"zelf": "^0.13.0"
+		"zelf": "^0.14.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.24.1",
@@ -46,6 +49,6 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-latest": "^6.24.1",
 		"source-map-loader": "^0.2.1",
-		"webpack": "^3.3.0"
+		"webpack": "^3.4.1"
 	}
 }
