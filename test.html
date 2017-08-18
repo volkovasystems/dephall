@@ -1,47 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>dephall unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:dephall</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./dephall.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "dephall unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.deepEqual( dephall( [ 1, 2, true, "hello" ], STRING, "yeah" ), [ "hello" ], "should be equal to [ 'hello' ]" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.deepEqual( dephall( [ 1, 2, 3, true ], STRING, "", "yeah" ), [ "yeah" ], "should be equal to [ 'yeah' ]" );
-
-				assert.deepEqual( dephall( [ 1, 2, 3, true, "yeah", "ugh" ], [ STRING, OBJECT ], "", "yeah" ), [ "yeah", "ugh" ],
-				 								"should be equal to [ 'yeah', 'ugh' ]" );
-
-				assert.deepEqual( dephall( [ 1, 2, 3 ], STRING, "", 123, "yeah" ), [ "yeah" ], "should be equal to [ 'yeah' ]" );
-
-				assert.deepEqual( dephall( [ [ 1, 2, 3 ] ], Array, "", 123, "yeah", [ 1, 2, 3 ] ),
-					[ [ 1, 2, 3 ] ], "should be equal to [ [ 1, 2, 3 ] ]" );
-
-				assert.deepEqual( dephall( [ "hello" ], Array, "", 123, "yeah", [ 1, 2, 3 ] ),
-					[ [ 1, 2, 3 ] ], "should be equal to [ [ 1, 2, 3 ] ]" );
-
-				( function test( ){
-					assert.deepEqual( dephall( arguments, OBJECT, { } ), [ { } ], "should be equal to [ { } ]" );
-				} )( 1, 2, 3, 4 );
-
-				( function test( ){
-					assert.deepEqual( dephall( arguments, OBJECT, { } ), [ { "hello": "world" } ], "should be equal to [ { 'hello': 'world' } ]" );
-				} )( 1, 2, 3, 4, { "hello": "world" } );
-				
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
