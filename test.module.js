@@ -70,6 +70,62 @@ const path = require( "path" );
 
 describe( "dephall", ( ) => {
 
+	describe( "`dephall( [ 1, 2, true, 'hello' ], STRING, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'hello' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, true, "hello" ], STRING, "yeah" ), [ "hello" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, true ], STRING, '', 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3, true ], STRING, "", "yeah" ), [ "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, true, 'yeah', 'ugh' ], [ STRING, OBJECT ], '', 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah', 'ugh' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3, true, "yeah", "ugh" ], [ STRING, OBJECT ], "", "yeah" ), [ "yeah", "ugh" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3 ], STRING, '', 123, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3 ], STRING, "", 123, "yeah" ), [ "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ [ 1, 2, 3 ] ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ] ]", ( ) => {
+
+			assert.deepEqual( dephall( [ [ 1, 2, 3 ] ], Array, "", 123, "yeah", [ 1, 2, 3 ] ), [ [ 1, 2, 3 ] ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 'hello' ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ] ]", ( ) => {
+
+			assert.deepEqual( dephall( [ "hello" ], Array, "", 123, "yeah", [ 1, 2, 3 ] ), [ [ 1, 2, 3 ] ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, 4, { 'hello': 'world' } ], OBJECT, { } )`", ( ) => {
+		it( "should be equal to [ { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3, 4, { "hello": "world" } ], OBJECT, { } ), [ { "hello": "world" } ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +134,63 @@ describe( "dephall", ( ) => {
 //: @client:
 
 describe( "dephall", ( ) => {
+
+	describe( "`dephall( [ 1, 2, true, 'hello' ], STRING, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'hello' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, true, "hello" ], STRING, "yeah" ), [ "hello" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, true ], STRING, '', 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3, true ], STRING, "", "yeah" ), [ "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, true, 'yeah', 'ugh' ], [ STRING, OBJECT ], '', 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah', 'ugh' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3, true, "yeah", "ugh" ], [ STRING, OBJECT ], "", "yeah" ), [ "yeah", "ugh" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3 ], STRING, '', 123, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah' ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3 ], STRING, "", 123, "yeah" ), [ "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ [ 1, 2, 3 ] ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ] ]", ( ) => {
+
+			assert.deepEqual( dephall( [ [ 1, 2, 3 ] ], Array, "", 123, "yeah", [ 1, 2, 3 ] ), [ [ 1, 2, 3 ] ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 'hello' ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ] ]", ( ) => {
+
+			assert.deepEqual( dephall( [ "hello" ], Array, "", 123, "yeah", [ 1, 2, 3 ] ), [ [ 1, 2, 3 ] ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, 4, { 'hello': 'world' } ], OBJECT, { } )`", ( ) => {
+		it( "should be equal to [ { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( dephall( [ 1, 2, 3, 4, { "hello": "world" } ], OBJECT, { } ), [ { "hello": "world" } ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-client
@@ -86,6 +199,121 @@ describe( "dephall", ( ) => {
 //: @bridge:
 
 describe( "dephall", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`dephall( [ 1, 2, true, 'hello' ], STRING, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'hello' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ 1, 2, true, "hello" ], STRING, "yeah" ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ "hello" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, true ], STRING, '', 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ 1, 2, 3, true ], STRING, "", "yeah" ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, true, 'yeah', 'ugh' ], [ STRING, OBJECT ], '', 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah', 'ugh' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ 1, 2, 3, true, "yeah", "ugh" ], [ STRING, OBJECT ], "", "yeah" ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ "yeah", "ugh" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3 ], STRING, '', 123, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'yeah' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ 1, 2, 3 ], STRING, "", 123, "yeah" ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ [ 1, 2, 3 ] ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ] ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ [ 1, 2, 3 ] ], Array, "", 123, "yeah", [ 1, 2, 3 ] ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ [ 1, 2, 3 ] ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 'hello' ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`", ( ) => {
+		it( "should be equal to [ [ 1, 2, 3 ] ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ "hello" ], Array, "", 123, "yeah", [ 1, 2, 3 ] ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ [ 1, 2, 3 ] ] );
+
+		} );
+	} );
+
+	describe( "`dephall( [ 1, 2, 3, 4, { 'hello': 'world' } ], OBJECT, { } )`", ( ) => {
+		it( "should be equal to [ { 'hello': 'world' } ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( dephall( [ 1, 2, 3, 4, { "hello": "world" } ], OBJECT, { } ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ { "hello": "world" } ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge

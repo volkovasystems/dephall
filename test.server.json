@@ -1,16 +1,116 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-18T02:58:38.730Z",
-    "end": "2017-08-18T02:58:38.731Z",
-    "duration": 1
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 8,
+		"tests": 7,
+		"passes": 7,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-28T08:19:39.777Z",
+		"end": "2017-08-28T08:19:39.791Z",
+		"duration": 14
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 'hello' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, true, 'hello' ], STRING, 'yeah' )` should be equal to [ 'hello' ]",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'yeah' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3, true ], STRING, '', 'yeah' )` should be equal to [ 'yeah' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'yeah', 'ugh' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3, true, 'yeah', 'ugh' ], [ STRING, OBJECT ], '', 'yeah' )` should be equal to [ 'yeah', 'ugh' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'yeah' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3 ], STRING, '', 123, 'yeah' )` should be equal to [ 'yeah' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 1, 2, 3 ] ]",
+			"fullTitle": "dephall `dephall( [ [ 1, 2, 3 ] ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )` should be equal to [ [ 1, 2, 3 ] ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 1, 2, 3 ] ]",
+			"fullTitle": "dephall `dephall( [ 'hello' ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )` should be equal to [ [ 1, 2, 3 ] ]",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ { 'hello': 'world' } ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3, 4, { 'hello': 'world' } ], OBJECT, { } )` should be equal to [ { 'hello': 'world' } ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 'hello' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, true, 'hello' ], STRING, 'yeah' )` should be equal to [ 'hello' ]",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'yeah' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3, true ], STRING, '', 'yeah' )` should be equal to [ 'yeah' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'yeah', 'ugh' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3, true, 'yeah', 'ugh' ], [ STRING, OBJECT ], '', 'yeah' )` should be equal to [ 'yeah', 'ugh' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'yeah' ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3 ], STRING, '', 123, 'yeah' )` should be equal to [ 'yeah' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 1, 2, 3 ] ]",
+			"fullTitle": "dephall `dephall( [ [ 1, 2, 3 ] ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )` should be equal to [ [ 1, 2, 3 ] ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ [ 1, 2, 3 ] ]",
+			"fullTitle": "dephall `dephall( [ 'hello' ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )` should be equal to [ [ 1, 2, 3 ] ]",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ { 'hello': 'world' } ]",
+			"fullTitle": "dephall `dephall( [ 1, 2, 3, 4, { 'hello': 'world' } ], OBJECT, { } )` should be equal to [ { 'hello': 'world' } ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

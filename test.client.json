@@ -1,0 +1,276 @@
+{
+	"state": {
+		"passed": 7,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-28T08:19:41.086Z",
+	"end": "2017-08-28T08:20:19.472Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "dephall",
+			"duration": 0,
+			"start": "2017-08-28T08:20:18.799Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "dephall",
+			"duration": 490,
+			"start": "2017-08-28T08:20:18.800Z",
+			"end": "2017-08-28T08:20:19.290Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-28T08:20:18.801Z",
+					"end": "2017-08-28T08:20:18.802Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'hello' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:18.956Z",
+					"end": "2017-08-28T08:20:18.956Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'hello' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:18.957Z",
+					"end": "2017-08-28T08:20:18.957Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'yeah' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.021Z",
+					"end": "2017-08-28T08:20:19.021Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'yeah' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.021Z",
+					"end": "2017-08-28T08:20:19.021Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'yeah', 'ugh' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.075Z",
+					"end": "2017-08-28T08:20:19.075Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'yeah', 'ugh' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.076Z",
+					"end": "2017-08-28T08:20:19.077Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'yeah' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.131Z",
+					"end": "2017-08-28T08:20:19.131Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ 'yeah' ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.132Z",
+					"end": "2017-08-28T08:20:19.132Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ [ 1, 2, 3 ] ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.182Z",
+					"end": "2017-08-28T08:20:19.183Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ [ 1, 2, 3 ] ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.183Z",
+					"end": "2017-08-28T08:20:19.183Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ [ 1, 2, 3 ] ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.240Z",
+					"end": "2017-08-28T08:20:19.240Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ [ 1, 2, 3 ] ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.240Z",
+					"end": "2017-08-28T08:20:19.241Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.290Z",
+					"end": "2017-08-28T08:20:19.290Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "dephall",
+					"associatedTest": "should be equal to [ { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-28T08:20:19.290Z",
+					"end": "2017-08-28T08:20:19.290Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "dephall"
+				}
+			]
+		},
+		{
+			"name": "`dephall( [ 1, 2, true, 'hello' ], STRING, 'yeah' )`",
+			"duration": 157,
+			"start": "2017-08-28T08:20:18.800Z",
+			"end": "2017-08-28T08:20:18.957Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hello' ]",
+					"start": "2017-08-28T08:20:18.801Z",
+					"end": "2017-08-28T08:20:18.956Z",
+					"duration": 155,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`dephall( [ 1, 2, 3, true ], STRING, '', 'yeah' )`",
+			"duration": 64,
+			"start": "2017-08-28T08:20:18.957Z",
+			"end": "2017-08-28T08:20:19.021Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'yeah' ]",
+					"start": "2017-08-28T08:20:18.957Z",
+					"end": "2017-08-28T08:20:19.021Z",
+					"duration": 64,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`dephall( [ 1, 2, 3, true, 'yeah', 'ugh' ], [ STRING, OBJECT ], '', 'yeah' )`",
+			"duration": 54,
+			"start": "2017-08-28T08:20:19.021Z",
+			"end": "2017-08-28T08:20:19.075Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'yeah', 'ugh' ]",
+					"start": "2017-08-28T08:20:19.021Z",
+					"end": "2017-08-28T08:20:19.075Z",
+					"duration": 54,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`dephall( [ 1, 2, 3 ], STRING, '', 123, 'yeah' )`",
+			"duration": 57,
+			"start": "2017-08-28T08:20:19.075Z",
+			"end": "2017-08-28T08:20:19.132Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'yeah' ]",
+					"start": "2017-08-28T08:20:19.076Z",
+					"end": "2017-08-28T08:20:19.131Z",
+					"duration": 55,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`dephall( [ [ 1, 2, 3 ] ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`",
+			"duration": 51,
+			"start": "2017-08-28T08:20:19.132Z",
+			"end": "2017-08-28T08:20:19.183Z",
+			"tests": [
+				{
+					"name": "should be equal to [ [ 1, 2, 3 ] ]",
+					"start": "2017-08-28T08:20:19.132Z",
+					"end": "2017-08-28T08:20:19.182Z",
+					"duration": 50,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`dephall( [ 'hello' ], Array, '', 123, 'yeah', [ 1, 2, 3 ] )`",
+			"duration": 57,
+			"start": "2017-08-28T08:20:19.183Z",
+			"end": "2017-08-28T08:20:19.240Z",
+			"tests": [
+				{
+					"name": "should be equal to [ [ 1, 2, 3 ] ]",
+					"start": "2017-08-28T08:20:19.183Z",
+					"end": "2017-08-28T08:20:19.239Z",
+					"duration": 56,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`dephall( [ 1, 2, 3, 4, { 'hello': 'world' } ], OBJECT, { } )`",
+			"duration": 50,
+			"start": "2017-08-28T08:20:19.240Z",
+			"end": "2017-08-28T08:20:19.290Z",
+			"tests": [
+				{
+					"name": "should be equal to [ { 'hello': 'world' } ]",
+					"start": "2017-08-28T08:20:19.240Z",
+					"end": "2017-08-28T08:20:19.290Z",
+					"duration": 50,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

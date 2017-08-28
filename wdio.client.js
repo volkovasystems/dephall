@@ -1,4 +1,4 @@
-wexports.config = {
+exports.config = {
 	"specs": [ "./test.bridge.js" ],
 	"maxInstances": 10,
 	"capabilities": [
